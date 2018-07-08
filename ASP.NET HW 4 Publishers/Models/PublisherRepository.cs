@@ -11,7 +11,7 @@ namespace ASP.NET_HW_4_Publishers.Models
 		static public PublisherRepository Instance => _instance ?? (_instance = new PublisherRepository());
 		private PublisherRepository() { }
 
-		private List<Publisher> Publishers { get; } = new List<Publisher>() { new Publisher() { Id = 1, Name = "Booking" } };
+		private List<Publisher> Publishers { get; } = new List<Publisher>() { new Publisher() { Id = 0, Name = "Bloomsbury Publishing" } };
 		public Publisher FindById(int? id) => Publishers.Find(i => i.Id == id);
 		public void Edit(int id, Publisher publisher)
 		{

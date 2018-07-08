@@ -13,10 +13,10 @@ namespace ASP.NET_HW_4_Publishers.Models
 		public string Name { get; set; }
 		[Required]
 		[DataType(DataType.Date)]
-		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 		public DateTime DateOfBirth { get; set; }
 		[DataType(DataType.Date)]
-		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 		public DateTime? DateOfDeath { get; set; }
 		public override string ToString() => Name;
 	}

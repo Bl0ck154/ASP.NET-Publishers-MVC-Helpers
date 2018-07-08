@@ -27,8 +27,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
 			<div class="col-md-10">
-				@*@Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })*@
-				@Html.TextBoxFor(model => model.DateOfBirth, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+				@Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+				@*@Html.TextBoxFor(model => model.DateOfBirth, "{0:dd/MM/yyyy}", new { @class = "form-control" })*@
 				@Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
 			</div>
         </div>
@@ -36,8 +36,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DateOfDeath, htmlAttributes: new { @class = "control-label col-md-2" })
 			<div class="col-md-10">
-				@*@Html.EditorFor(model => model.DateOfDeath, new { htmlAttributes = new { @class = "form-control" } })*@
-				@Html.TextBoxFor(model => model.DateOfDeath, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+				@Html.EditorFor(model => model.DateOfDeath, new { htmlAttributes = new { @class = "form-control" } })
+				@*@Html.TextBoxFor(model => model.DateOfDeath, "{0:dd/MM/yyyy}", new { @class = "form-control" })*@
 				@Html.ValidationMessageFor(model => model.DateOfDeath, "", new { @class = "text-danger" })
 			</div>
         </div>

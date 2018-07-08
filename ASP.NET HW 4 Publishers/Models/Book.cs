@@ -15,7 +15,7 @@ namespace ASP.NET_HW_4_Publishers.Models
 		public Publisher Publisher { get; set; }
 		public IEnumerable<Author> Authors { get; set; }
 		[DataType(DataType.Date)]
-		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 		public DateTime PublishDate { get; set; }
 		public int PageCount { get; set; }
 		public string ISBN { get; set; }

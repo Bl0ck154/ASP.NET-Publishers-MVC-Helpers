@@ -12,8 +12,8 @@ namespace ASP.NET_HW_4_Publishers.Models
 		private AuthorRepository() { }
 
 		private List<Author> Authors { get; } = new List<Author>() {
-			new Author() { Id = 1, Name = "Pushkin", DateOfBirth = DateTime.Now },
-			new Author() { Id = 2, Name = "Turgenev", DateOfBirth = DateTime.Now } };
+			new Author() { Id = 0, Name = "Joanne Rowling", DateOfBirth = new DateTime(1965, 07, 31) },
+			new Author() { Id = 2, Name = "Александр Пушкин", DateOfBirth = new DateTime(1799, 06, 06), DateOfDeath = new DateTime(1837, 02, 10) } };
 		public Author FindById(int? id) => Authors.Find(i => i.Id == id);
 		public void Edit(int id, Author author)
 		{
