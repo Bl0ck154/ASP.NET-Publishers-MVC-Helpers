@@ -1,0 +1,19 @@
+﻿@using ASP.NET_HW_4_Publishers.Models
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+	<div class="col-md-4">
+		<h2>@BookRepository.Instance.ToList().Count() Books in repository</h2>
+		<p>@Html.ActionLink("Add books", "Create", "Books", null, new { @class = "btn btn-default" })</p>
+	</div>
+	<div class="col-md-4">
+		<h2>@AuthorRepository.Instance.ToList().Count() Authors in repository</h2>
+		<p>@Html.ActionLink("Add author", "Create", "Authors", null, new { @class = "btn btn-default" })</p>
+	</div>
+	<div class="col-md-4">
+		<h2>@PublisherRepository.Instance.ToList().Count() Publishers in repository</h2>
+		<p>@Html.ActionLink("Add publisher", "Create", "Publishers", null, new { @class = "btn btn-default" })</p>
+	</div>
+</div>
