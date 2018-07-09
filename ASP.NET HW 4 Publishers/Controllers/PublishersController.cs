@@ -97,7 +97,7 @@ namespace ASP.NET_HW_4_Publishers.Controllers
 		{
 			foreach (Book book in BookRepository.Instance.ToList())
 			{
-				if (book.Publisher.Id == id)
+				if (book.Publisher?.Id == id)
 					book.Publisher = null;
 			}
 			Publisher publisher = db.FindById(id);

@@ -16,7 +16,10 @@ namespace ASP.NET_HW_4_Publishers.Models
 		public IEnumerable<Author> Authors { get; set; }
 		[DataType(DataType.Date)]
 		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+		[Display(Name = "Publish date")]
 		public DateTime PublishDate { get; set; }
+		[Display(Name = "Page count")]
+		[Range(1,9999999)]
 		public int PageCount { get; set; }
 		public string ISBN { get; set; }
 	}

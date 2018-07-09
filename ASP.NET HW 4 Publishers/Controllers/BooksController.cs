@@ -40,11 +40,13 @@ namespace ASP.NET_HW_4_Publishers.Controllers
 		
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,PublishDate,PageCount,ISBN")] Book book, IEnumerable<string> Authors, int Publisher)
+        public ActionResult Create([Bind(Include = "Id,Name,PublishDate,PageCount,ISBN")] Book book, IEnumerable<string> Authors, int? Publisher)
         {
-            if (ModelState.IsValid && Authors != null)
+            if (ModelState.IsValid)
             {
-				book.Authors = new List<Author>(Authors.Select(s => AuthorRepository.Instance.FindById(int.Parse(s))));
+				if(Authors != null)
+					book.Authors = new List<Author>(Authors.Select(s => AuthorRepository.Instance.FindById(int.Parse(s))));
+
 				book.Publisher = PublisherRepository.Instance.FindById(Publisher);
                 db.Add(book);
                 return RedirectToAction("Index");
@@ -71,10 +73,10 @@ namespace ASP.NET_HW_4_Publishers.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,PublishDate,PageCount,ISBN")] Book book, IEnumerable<string> authors, IEnumerable<string> publisher)
 		{
-            if (ModelState.IsValid && authors != null && publisher != null)
+            if (ModelState.IsValid)
 			{
-				book.Authors = new List<Author>(authors.Select(s => AuthorRepository.Instance.FindByName(s)));
-				book.Publisher = PublisherRepository.Instance.FindByName(publisher.First());
+				book.Publisher = publisher == null ? null : PublisherRepository.Instance.FindByName(publisher.First());
+				book.Authors = authors == null ? null : new List<Author>(authors.Select(s => AuthorRepository.Instance.FindByName(s)));
 				db.Edit(book.Id, book);
                 return RedirectToAction("Index");
             }
