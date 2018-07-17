@@ -167,6 +167,8 @@
     <Compile Include="Models\Publisher.cs" />
     <Compile Include="Models\AuthorRepository.cs" />
     <Compile Include="Models\PublisherRepository.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
