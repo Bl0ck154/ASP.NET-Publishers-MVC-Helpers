@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ASP.NET_HW_4_Publishers.Models
 {
-	public class Publisher
+	public class Role
 	{
 		public int Id { get; set; }
 		[Required]
