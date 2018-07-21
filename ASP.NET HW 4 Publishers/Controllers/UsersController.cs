@@ -44,7 +44,6 @@ namespace ASP.NET_HW_4_Publishers.Controllers
         {
             if (ModelState.IsValid)
             {
-			//	user.Role = PublisherRepository.Instance.FindById(role);
                 db.Add(user);
                 return RedirectToAction("Index");
             }
@@ -72,7 +71,6 @@ namespace ASP.NET_HW_4_Publishers.Controllers
 		{
             if (ModelState.IsValid)
 			{
-			//	user.Publisher = publisher == null ? null : PublisherRepository.Instance.FindByName(publisher.First());
 				db.Edit(user.Id, user);
                 return RedirectToAction("Index");
             }

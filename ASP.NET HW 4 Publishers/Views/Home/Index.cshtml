@@ -5,15 +5,27 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<h2>@BookRepository.Instance.ToList().Count() Books in repository</h2>
-		<p>@Html.ActionLink("Add book", "Create", "Books", null, new { @class = "btn btn-default" })</p>
+		<h2>@Html.ActionLink("Books", "Index", "Books"): @Html.ActionLink("Add book", "Create", "Books", null, new { @class = "btn btn-default" })
+		</h2>
+		<p>@Html.GenerateSimpleTable(BookRepository.Instance.ToList())</p>
 	</div>
 	<div class="col-md-4">
-		<h2>@AuthorRepository.Instance.ToList().Count() Authors in repository</h2>
-		<p>@Html.ActionLink("Add author", "Create", "Authors", null, new { @class = "btn btn-default" })</p>
+		<h2>@Html.ActionLink("Authors", "Index", "Authors"): @Html.ActionLink("Add author", "Create", "Authors", null, new { @class = "btn btn-default" })</h2>
+		<p>@Html.GenerateSimpleTable(AuthorRepository.Instance.ToList())</p>
 	</div>
 	<div class="col-md-4">
-		<h2>@PublisherRepository.Instance.ToList().Count() Publishers in repository</h2>
-		<p>@Html.ActionLink("Add publisher", "Create", "Publishers", null, new { @class = "btn btn-default" })</p>
+		<h2>@Html.ActionLink("Publishers", "Index", "Publishers"): @Html.ActionLink("Add publisher", "Create", "Publishers", null, new { @class = "btn btn-default" })</h2>
+		<p>@Html.GenerateSimpleTable(PublisherRepository.Instance.ToList())</p>
+	</div>
+</div>
+<br />
+<div class="row">
+	<div class="col-md-6">
+		<h2>@Html.ActionLink("Users", "Index", "Users"): @Html.ActionLink("Add user", "Create", "Users", null, new { @class = "btn btn-default" })</h2>
+		<p>@Html.GenerateSimpleTable(UserRepository.Instance.ToList())</p>
+	</div>
+	<div class="col-md-6">
+		<h2>@Html.ActionLink("Roles", "Index", "Roles"): @Html.ActionLink("Add role", "Create", "Roles", null, new { @class = "btn btn-default" })</h2>
+		<p>@Html.GenerateSimpleTable(RoleRepository.Instance.ToList())</p>
 	</div>
 </div>

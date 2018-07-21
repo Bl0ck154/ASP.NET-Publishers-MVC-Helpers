@@ -1,83 +1,74 @@
 ﻿@model ASP.NET_HW_4_Publishers.Models.Book
 
 @{
-
+	ViewBag.Title = "Details";
 }
 
-<!DOCTYPE html>
+<h2>Details</h2>
+<div>
+	<h4>Book</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Id)
+		</dt>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>Book</h4>
-        <hr />
-		<dl class="dl-horizontal">
-			<dt>
-				@Html.DisplayNameFor(model => model.Id)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Id)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.Id)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Name)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.Name)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Name)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.Name)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Publisher)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.Publisher)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Publisher.Name)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.Publisher.Name)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Authors)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.Authors)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Authors)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.Authors)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.PublishDate)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.PublishDate)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.PublishDate)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.PublishDate)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.PageCount)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.PageCount)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.PageCount)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.PageCount)
-			</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.ISBN)
+		</dt>
 
-			<dt>
-				@Html.DisplayNameFor(model => model.ISBN)
-			</dt>
+		<dd>
+			@Html.DisplayFor(model => model.ISBN)
+		</dd>
 
-			<dd>
-				@Html.DisplayFor(model => model.ISBN)
-			</dd>
-
-		</dl>
-    </div>
-	<p>
-		@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-		@Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
-		@Html.ActionLink("Back to List", "Index")
-	</p>
-</body>
-</html>
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+	@Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
+	@Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,21 +1,16 @@
 ﻿@model ASP.NET_HW_4_Publishers.Models.User
 @using ASP.NET_HW_4_Publishers.Models
+
 @{
-	
+	ViewBag.Title = "Create";
 }
 
-<!DOCTYPE html>
+<h2>Create</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
 	<div class="form-horizontal">
 		<h4>User</h4>
 		<hr />
@@ -58,10 +53,8 @@
 			</div>
 		</div>
 	</div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
-</body>
-</html>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>

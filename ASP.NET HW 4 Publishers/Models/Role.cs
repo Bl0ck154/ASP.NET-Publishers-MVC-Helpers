@@ -8,6 +8,7 @@ namespace ASP.NET_HW_4_Publishers.Models
 {
 	public class Role
 	{
+		[ScaffoldColumn(true)]
 		public int Id { get; set; }
 		[Required]
 		public string Name { get; set; }

@@ -166,6 +166,7 @@
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookRepository.cs" />
+    <Compile Include="Models\GenerateTableHelper.cs" />
     <Compile Include="Models\Publisher.cs" />
     <Compile Include="Models\AuthorRepository.cs" />
     <Compile Include="Models\PublisherRepository.cs" />

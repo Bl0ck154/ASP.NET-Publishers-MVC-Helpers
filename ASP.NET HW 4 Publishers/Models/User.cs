@@ -8,6 +8,7 @@ namespace ASP.NET_HW_4_Publishers.Models
 {
 	public class User
 	{
+		[ScaffoldColumn(true)]
 		public int Id { get; set; }
 		[Required]
 		[DataType(DataType.EmailAddress)]
